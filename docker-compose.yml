@@ -1,7 +1,7 @@
 version: '3'
 services:
   api:
-    container_name: api
+    container_name: management_api
     tty: true
     stdin_open: true
     command: /bin/bash
@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
   db:
-    container_name: db
+    container_name: management_db
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: password
